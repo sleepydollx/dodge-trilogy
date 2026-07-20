@@ -1,6 +1,6 @@
 # DODGE! Trilogy 🎮
 
-A tiny falling-object dodge game, made three times over — same core mechanic, three completely different looks and feels.
+A tiny falling-object dodge game, made three times over same core mechanic, three completely different looks and feels.
 
 Move left and right, survive as long as you can, and try not to get hit. It gets harder the longer you last. It always gets harder.
 
@@ -41,4 +41,4 @@ python dodge_neapolitan.py   # cute
 
 ## Why three versions?
 
-Same game logic, three different art directions — a fun way to explore how far a re-skin can change the feel of something without touching the core mechanics.
+Same game logic, three different art directions, a fun way to explore how far a re-skin can change the feel of something without touching the core mechanics.
