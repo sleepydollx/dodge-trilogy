@@ -13,7 +13,7 @@ import sys
 
 import pygame
 
-# ---------- Config ----------
+
 WIDTH, HEIGHT = 480, 640
 FPS = 60
 
