@@ -1,5 +1,5 @@
 """
-DODGE! deluxe — same game, dressed up.
+DODGE! deluxe same game, different style.
 Gradient night sky, drifting stars, glowing player with a particle trail,
 screen shake and a burst when you get hit.
 
@@ -13,7 +13,6 @@ import sys
 
 import pygame
 
-# ---------- Config ----------
 WIDTH, HEIGHT = 480, 640
 FPS = 60
 
@@ -73,9 +72,8 @@ def main():
     font_small = pygame.font.SysFont("consolas", 15)
 
     sky = make_sky()
-    world = pygame.Surface((WIDTH, HEIGHT))  # we draw here, then blit with shake offset
+    world = pygame.Surface((WIDTH, HEIGHT))
 
-    # Parallax stars: (x, y, speed, size)
     stars = [(random.uniform(0, WIDTH), random.uniform(0, HEIGHT),
               random.uniform(12, 45), random.choice((1, 1, 2)))
              for _ in range(70)]
@@ -85,8 +83,8 @@ def main():
     def reset():
         return {
             "player_x": WIDTH / 2 - PLAYER_W / 2,
-            "rocks": [],            # [x, y, size, spin]
-            "particles": [],        # {x, y, vx, vy, life, max, color, size}
+            "rocks": [],           
+            "particles": [],        
             "time_alive": 0.0,
             "spawn_timer": 0.0,
             "alive": True,
@@ -189,7 +187,7 @@ def main():
             stars[:] = [(x, (y + spd * dt) % HEIGHT, spd, s) for x, y, spd, s in stars]
             state["shake"] = max(0.0, state["shake"] - 30 * dt)
 
-        # ---------- Draw ----------
+        # Draw
         world.blit(sky, (0, 0))
 
         for x, y, spd, s in stars:
