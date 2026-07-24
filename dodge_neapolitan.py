@@ -68,7 +68,6 @@ def main():
     sky = make_sky()
     world = pygame.Surface((WIDTH, HEIGHT))
 
-    # Sprinkle rain in the background: (x, y, speed, color, tilt)
     sprinkles = [(random.uniform(0, WIDTH), random.uniform(0, HEIGHT),
                   random.uniform(15, 50), random.choice(SPRINKLE_COLORS),
                   random.uniform(-0.6, 0.6))
