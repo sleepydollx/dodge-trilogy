@@ -11,7 +11,7 @@ import sys
 
 import pygame
 
-# ---------- Config ----------
+# Config
 WIDTH, HEIGHT = 480, 640
 FPS = 60
 
@@ -61,7 +61,7 @@ def main():
     while True:
         dt = clock.tick(FPS) / 1000.0
 
-        # ---------- Input / events ----------
+        # Input/Events
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -85,7 +85,7 @@ def main():
             state["player_x"] += move * PLAYER_SPEED * dt
             state["player_x"] = max(0, min(WIDTH - PLAYER_W, state["player_x"]))
 
-            # ---------- Difficulty & spawning ----------
+            # Difficulty ramping/spawning
             state["time_alive"] += dt
             d = ramp(state["time_alive"])
             spawn_every = SPAWN_EVERY_START + (SPAWN_EVERY_MIN - SPAWN_EVERY_START) * d
@@ -98,7 +98,7 @@ def main():
                 x = random.randint(0, WIDTH - size)
                 state["rocks"].append([x, -size, size])
 
-            # ---------- Move rocks & collide ----------
+            # Move rocks/Collisions
             player_rect = pygame.Rect(int(state["player_x"]), HEIGHT - 60, PLAYER_W, PLAYER_H)
             for rock in state["rocks"]:
                 rock[1] += fall_speed * dt
@@ -113,7 +113,7 @@ def main():
 
             state["rocks"] = [r for r in state["rocks"] if r[1] < HEIGHT + 50]
 
-        # ---------- Draw ----------
+        # Draw
         screen.fill(BG)
 
         # rocks

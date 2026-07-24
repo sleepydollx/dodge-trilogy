@@ -108,7 +108,7 @@ def main():
     while True:
         dt = clock.tick(FPS) / 1000.0
 
-        # ---------- Events ----------
+        # Events
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit(); sys.exit()

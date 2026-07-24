@@ -26,7 +26,7 @@ FALL_SPEED_START = 160
 FALL_SPEED_MAX = 520
 RAMP_SECONDS = 75
 
-# Palette — neapolitan 🍨
+# Palette — neapolitan 
 SKY_TOP = (255, 246, 233)        # vanilla cream
 SKY_BOTTOM = (251, 221, 210)     # warm strawberry milk
 CHOCOLATE = (74, 44, 33)
@@ -180,7 +180,7 @@ def main():
                             for x, y, spd, c, t in sprinkles]
             state["shake"] = max(0.0, state["shake"] - 30 * dt)
 
-        # ---------- Draw ----------
+        # Draw
         world.blit(sky, (0, 0))
 
         # Sprinkle rain: tiny tilted capsules
