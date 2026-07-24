@@ -175,7 +175,7 @@ def main():
 
             state["rocks"] = [r for r in state["rocks"] if r[1] < HEIGHT + 60]
 
-        # ---------- Always-on updates (particles, stars, shake decay) ----------
+        # Always-on updates (particles, stars, shake decay) 
         if not state["paused"]:
             for p in state["particles"]:
                 p["life"] += dt
